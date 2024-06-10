@@ -105,7 +105,7 @@ public class NotesController {
      */
     @Operation(description = "Retreives all notes.", summary = "Retreives all notes from database.")
     @ApiResponse(responseCode = "200", description = "Success.", content = @Content(array = @ArraySchema(schema = @Schema(implementation = NoteReturnObject.class))))
-    @GetMapping(path = "/list")
+    @GetMapping(path = "/")
     public List<NoteEntity> list() {
         return notesRepository.findAll();
     }
